@@ -128,7 +128,7 @@
 			        <br>
 		            @if (date_default_timezone_set('America/La_Paz'))
 			        @endif
-                    {{ date("d/m/Y H:i") }}
+	                  fecha y hora:  {{ date("d/m/Y H:i") }} 
                     </div>
                 </div>
             </div>
