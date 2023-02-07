@@ -21,7 +21,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="input">
-                                <input type="text" value="0" id="texto-expresion" aria-label="First name" class="form-control">
+                                <input type="text" value=0 id="texto-expresion" aria-label="First name" class="form-control">
                             </div>
                         </div>
                         <div class="row">
