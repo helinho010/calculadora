@@ -21,7 +21,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="input">
-                                <input type="text" value=0 id="texto-expresion" aria-label="First name" class="form-control">
+                                <input type="text" value="0" id="texto-expresion" aria-label="First name" class="form-control">
                             </div>
                         </div>
                         <div class="row">
@@ -69,12 +69,11 @@
 <script>
     $("button").click(function(e){
         e.preventDefault();
-        var expresion=$('#texto-expresion').val();
-        if ($(this).attr('name') == "calcular")
-        {
-            $('#texto-expresion').attr("value",eval($('#texto-expresion').val()));
+        var expresion=String($('#texto-expresion').val());
+        if ($(this).attr('name') == "calcular"){
+            $('#texto-expresion').attr('value',eval(expresion));
         }else if ($(this).attr('name') == "C") {
-            $('#texto-expresion').attr("value","0");
+            $("#texto-expresion").attr("value","0");
         }else if ($(this).attr('name') == "R"){
             expresion=expresion.substring(0,expresion.length-1);
             if (expresion === ""){
@@ -89,6 +88,7 @@
             expresion = expresion + $(this).attr('name');
             $('#texto-expresion').attr('value',expresion);
         }
+        $('#texto-expresion').attr('value',expresion);
     });
 </script>
         
