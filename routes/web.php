@@ -19,6 +19,3 @@ Route::get('/', function () {
 Route::get('/calculadora', function () {
     return view('calc');
 });
-Route::get('/calculadoraFinanciera'function(){
-    return view('calc');
-});
