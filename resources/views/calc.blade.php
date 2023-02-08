@@ -21,7 +21,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="input">
-                                <input type="text" value=0 id="texto-expresion" aria-label="First name" class="form-control">
+                                <input type="text" value=0 id="texto-expresion" aria-label="Calcular" class="form-control">
                             </div>
                         </div>
                         <div class="row">
@@ -71,26 +71,26 @@
         e.preventDefault();
         var expresion=String($('#texto-expresion').val());
         var atributoNameButton= $(this).attr('name');
-        console.log(expresion);
-        console.log(atributoNameButton);
-        console.log($('#texto-expresion').attr('value','0'));
+
         if ( atributoNameButton == "calcular"){
-            $('#texto-expresion').attr('value',eval(expresion));
+            expresion=String(eval($('#texto-expresion').val()));
+            $('#texto-expresion').val(expresion);
+            console.log(eval($('#texto-expresion').val()));
         }else if (atributoNameButton == "C") {
-            $("#texto-expresion").attr("value","0");
+            $("#texto-expresion").val("0");
         }else if (atributoNameButton == "R"){
             expresion=expresion.substring(0,expresion.length-1);
             if (expresion === ""){
               expresion="0";  
             }
-            $('#texto-expresion').attr('value',expresion);
+            $('#texto-expresion').val(expresion);
         }else{
             if (expresion === "0") 
             {
                 expresion="";
             }
             expresion = expresion + $(this).attr('name');
-            $('#texto-expresion').attr('value',expresion);
+            $('#texto-expresion').val(expresion);
         }
     });
 </script>
